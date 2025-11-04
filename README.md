@@ -123,6 +123,8 @@ ggplot(data = summary_weekly, aes(x = day_of_week, y = avg_steps, fill = avg_ste
     y= "Average Steps"
     )
 ```
+[!image alt](https://github.com/quynhddang/Bellabeat-CS/blob/41a1ec5452da8a6e310c2fd9d430e17555419d39/Visualization/weekly_activity.png)
+
 ```{r Hourly Activity, results='hide'}
 # Determining hourly activity
 
