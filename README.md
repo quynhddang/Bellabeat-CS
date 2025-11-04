@@ -123,8 +123,7 @@ ggplot(data = summary_weekly, aes(x = day_of_week, y = avg_steps, fill = avg_ste
     y= "Average Steps"
     )
 ```
-[!image alt](https://github.com/quynhddang/Bellabeat-CS/blob/41a1ec5452da8a6e310c2fd9d430e17555419d39/Visualization/weekly_activity.png)
-
+![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/weekly_activity.png)
 ```{r Hourly Activity, results='hide'}
 # Determining hourly activity
 
@@ -149,6 +148,7 @@ ggplot(data = hour_activity)+
   x= "Hours",
   y= "Total Steps")
 ```
+![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/hourly_activity.png)
 
 Next, I checked the impact of activity on energy expenditure by analyzing the correlation between **total steps** and **calories burned** in the daily_activity dataset.
 ```{r Correlation between activity and calories}
@@ -167,6 +167,7 @@ ggplot(data = daily_activity, aes(x = total_steps, y = calories))+
   x = "Total Steps",
   y = "Calories Burned")
 ```
+![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/Steps_vs_calories.png)
 
 Finally, I checked to see if there is any correlation between **daily activity** and **sleep**.
 ```{r Daily Sleep Data, results='hide'}
@@ -191,6 +192,7 @@ ggplot(data = daily_sleep_combined, aes(x = total_steps, y = total_minutes_aslee
       x = "Total Steps",
       y = "Minutes Asleep")
 ```
+![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/Sleep_vs_activity.png)
 
 ## Conclusions and Recommendations 
 
