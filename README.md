@@ -1,5 +1,14 @@
 # Case Study: Analyzing Smart Device Fitness Data
 
+## 📂 Table of Contents
+- [Introduction](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#introduction)
+- [Business Task](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#business-task)
+- [About the Data](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#about-the-data)
+- [Importing Datasets](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#importing-datasets)
+- [Processing the Data](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#processing-the-data)
+- [Analyzing the Data](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#analyzing-the-data)
+- [Conclusions and Recommendations](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#conclusions-and-recommendations)
+- [Final Summarry](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#final-summary)
 ## Introduction
 
 Bellabeat is a high-tech company that manufactures health-focused smart products that informs and inspires women around the world. The company has developed technology that collects data on health metrics such as activity, sleep, stress, and reproductive health, empowering women with more knowledge about their own health and habits. Sando Mur and Urška Sršen, co-founder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help to unlock new growth opportunities for the company.
@@ -12,7 +21,7 @@ The primary objective of this case study is to identify opportunities for Bellab
 
 The dataset being used for this case study is the [FitBit Fitness Tracker Dataset](https://www.kaggle.com/datasets/arashnic/fitbit) available on Kaggle through Mobius and licensed as a Public Domain. This Kaggle set contains personal fitness tracker data from thirty Fitbit users that have consented to the submission of personal tracker data. The data includes information about user's daily physical activity, heart rate, and sleep with some limitations. The sample size only includes 30 users which does not represent all Fitbit users or Bellabeat's customer base. Furthermore, the data is from 2016, so it does not reflect the current usage trends. Because data was collected from participants who volunteered, there may be bias towards users who are interested in fitness. 
 
-## Importing datasets
+## Importing Datasets
 
 The dataset was downloaded from Kaggle and then imported to R Studio.
 ```{r Importing Dataset, results= 'hide'}
