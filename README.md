@@ -24,7 +24,8 @@ The dataset being used for this case study is the [FitBit Fitness Tracker Datase
 ## Importing Datasets
 
 The dataset was downloaded from Kaggle and then imported to R Studio.
-```{r Importing Dataset, results= 'hide'}
+
+```r {r Importing Dataset, results= 'hide'}
 # Install Packages
 
 install.packages("tidyverse")
@@ -57,7 +58,9 @@ First, the column names for all files used were standardized to _snake_case_ for
 Next, all dates and time columns for all datasets were then formatted from character format to date format. 
 
 Finally, because the minuteSleep_merged dataset contains data that is measured in minutes, a new sleep_summary dataset was created by aggregating total minutes asleep per user per day to allow for daily level analysis and finding patterns in user's sleep behavior.
-```{r Processing Data, results='hide'}
+
+```r {r Processing Data, results='hide'}
+
 # Clean column names
 
 daily_activity <- clean_names(daily_activity)
@@ -107,7 +110,8 @@ sum(duplicated(sleep_summary))
 
 Now, it is time to analyze the data and explore potential relationships between key variables in order to understand general user behaviors.
 First, I determined the **average activity of users throughout the day and the week**.
-```{r Average Daily Steps per day and week, results='hide'}
+
+```r {r Average Daily Steps per day and week, results='hide'}
 # Determining average daily steps per week
 
 weekly_daily_steps <- daily_activity %>%
@@ -121,7 +125,8 @@ summary_weekly <- weekly_daily_steps %>%
     avg_calories = mean (calories)
   )
 ```
-```{r Weekly Activity Visualization}
+
+```r {r Weekly Activity Visualization}
 # Visualization 
 
 ggplot(data = summary_weekly, aes(x = day_of_week, y = avg_steps, fill = avg_steps, width = 0.7))+ 
@@ -132,8 +137,10 @@ ggplot(data = summary_weekly, aes(x = day_of_week, y = avg_steps, fill = avg_ste
     y= "Average Steps"
     )
 ```
+
 ![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/weekly_activity.png)
-```{r Hourly Activity, results='hide'}
+
+```r {r Hourly Activity, results='hide'}
 # Determining hourly activity
 
 hour_activity <- hourly_steps %>% 
@@ -147,7 +154,8 @@ peak_data <- hour_activity %>%
   group_by(hour) %>%
   summarise(max_points = max(step_total, na.rm = TRUE))
 ```
-```{r Hourly Activity Visualization}
+
+```r {r Hourly Activity Visualization}
 #Visualization
 
 ggplot(data = hour_activity)+
@@ -157,10 +165,12 @@ ggplot(data = hour_activity)+
   x= "Hours",
   y= "Total Steps")
 ```
+
 ![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/hourly_activity.png)
 
 Next, I checked the impact of activity on energy expenditure by analyzing the correlation between **total steps** and **calories burned** in the daily_activity dataset.
-```{r Correlation between activity and calories}
+
+```r {r Correlation between activity and calories}
 cor_steps_calories <- cor(daily_activity$total_steps, 
                           daily_activity$calories, 
                           use = "complete.obs")
@@ -176,16 +186,19 @@ ggplot(data = daily_activity, aes(x = total_steps, y = calories))+
   x = "Total Steps",
   y = "Calories Burned")
 ```
+
 ![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/Steps_vs_calories.png)
 
 Finally, I checked to see if there is any correlation between **daily activity** and **sleep**.
-```{r Daily Sleep Data, results='hide'}
+
+```r {r Daily Sleep Data, results='hide'}
 # Merging daily activity and sleep summary 
 
 daily_sleep_combined <- left_join (daily_activity, sleep_summary, 
   by = c("id" = "id", "activity_date" = "date"))
 ```
-```{r Correlation between activity and sleep}
+
+```r {r Correlation between activity and sleep}
 cor_sleep_step <- cor(daily_sleep_combined$total_minutes_asleep,
                       daily_sleep_combined$total_steps,
                       use = "complete.obs")
@@ -201,6 +214,7 @@ ggplot(data = daily_sleep_combined, aes(x = total_steps, y = total_minutes_aslee
       x = "Total Steps",
       y = "Minutes Asleep")
 ```
+
 ![image alt](https://github.com/quynhddang/Bellabeat-CS/blob/134177807d0b6657ed4689e65341688a85939e36/Visualization/Sleep_vs_activity.png)
 
 ## Conclusions and Recommendations 
