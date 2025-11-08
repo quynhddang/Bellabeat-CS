@@ -1,6 +1,7 @@
 # Case Study: Analyzing Smart Device Fitness Data
 
 ## 📂 Table of Contents
+
 - [Introduction](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#introduction)
 - [Business Task](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#business-task)
 - [About the Data](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#about-the-data)
@@ -9,6 +10,7 @@
 - [Analyzing the Data](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#analyzing-the-data)
 - [Conclusions and Recommendations](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#conclusions-and-recommendations)
 - [Final Summarry](https://github.com/quynhddang/Bellabeat-CS/tree/main?tab=readme-ov-file#final-summary)
+  
 ## Introduction
 
 Bellabeat is a high-tech company that manufactures health-focused smart products that informs and inspires women around the world. The company has developed technology that collects data on health metrics such as activity, sleep, stress, and reproductive health, empowering women with more knowledge about their own health and habits. Sando Mur and Urška Sršen, co-founder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help to unlock new growth opportunities for the company.
